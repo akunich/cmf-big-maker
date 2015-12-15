@@ -1,0 +1,1 @@
+<h1 style="text-align: center">Hi! CMF is working!</h1>

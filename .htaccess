@@ -1,0 +1,16 @@
+﻿RewriteEngine on
+
+RewriteBase /
+
+# если папка или файл реально существуют, используем их
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+<FilesMatch ".(htaccess|htpasswd|config|lic)$">
+ Order Allow,Deny
+ Deny from all
+ </FilesMatch>
+
+# если нет — отдаём всё index.php
+RewriteRule . index.php
