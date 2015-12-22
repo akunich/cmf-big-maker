@@ -17,8 +17,6 @@ $view->var = $var;
 ```html
 <h1><?=$var?></h1>
 ```
-3. Методы класса View
-
 4. Вложение шаблонов в шаблон
 ```php
 $view->import($name, View $view);
